@@ -1,0 +1,84 @@
+/* ========== GERAL ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background-color: #222 !important;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #00bcd4 !important;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00bcd4 !important;
+}
+
+/* ========== SEÇÕES ========== */
+section {
+  padding: 60px 15%;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+section p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Alternar cor de fundo entre seções */
+.bg-light {
+  background-color: #fafafa !important;
+}
+
+/* ========== ROLAGEM SUAVE ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Botão voltar ao topo */
+#btnTop {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: none;            /* inicialmente escondido */
+  z-index: 9999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* animação pequena ao aparecer */
+#btnTop.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+#btnTop.hide {
+  opacity: 0;
+  transform: translateY(10px);
+}

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- ====== CONFIGURAÇÕES BÁSICAS ====== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Gustavo Bitencourt</title>
+
+  <!-- ====== BOOTSTRAP ====== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ====== SEU CSS PERSONALIZADO ====== -->
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- ====== SCRIPT BOOTSTRAP (funciona o menu em celular) ====== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<!-- Botão Voltar ao Topo -->
+<button id="btnTop" class="btn btn-dark" title="Voltar ao topo" aria-label="Voltar ao topo">
+  ↑
+</button>
+<script>
+  // elemento do botão
+  const btnTop = document.getElementById('btnTop');
+
+  // mostra o botão quando o usuário rolar abaixo de 400px (ajuste se quiser)
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btnTop.classList.add('show');
+      btnTop.classList.remove('hide');
+    } else {
+      btnTop.classList.add('hide');
+      btnTop.classList.remove('show');
+      // escondemos após a transição para evitar ocupar espaço
+      setTimeout(() => {
+        if (!btnTop.classList.contains('show')) btnTop.style.display = 'none';
+      }, 200);
+      return;
+    }
+    // garante que o display seja flex quando mostrar
+    btnTop.style.display = 'flex';
+  });
+
+  // efeito smooth scroll para o topo
+  btnTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<body>
+  
+  </div>
+
+  <!-- Aqui dentro você cola as seções: Cibersegurança, Blockchain, Automação e Edge Computing -->
+  <!-- (Não precisa mudar o conteúdo delas, só colocar tudo dentro desse bloco) -->
+</section>
+
+
+  <!-- ====== NAVBAR ====== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Logo / nome do site -->
+    <a class="navbar-brand" href="#">Portfólio Gustavo</a>
+
+    <!-- Botão de menu (mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links do menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#sobre">Sobre mim</a></li>
+        <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+
+        <!-- Botão para Tecnologias -->
+        <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologias</a></li>
+
+        <!-- As matérias continuam -->
+        <li class="nav-item"><a class="nav-link" href="#humanas">Ciências Humanas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#natureza">Ciências da Natureza</a></li>
+        <li class="nav-item"><a class="nav-link" href="#matematica">Matemática</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ti">TI</a></li>
+        <li class="nav-item"><a class="nav-link" href="#linguagens">Linguagens</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+   <!-- ======== Página 1: Sobre Mim ======== -->
+  <section id="sobre" class="py-5 bg-light" style="margin-top: 70px;">
+    <div class="container text-center">
+            <h1 class="fw-bold mb-3">Gustavo Bitencourt Lopes</h1>
+      <p class="lead">
+        Me chamo <strong>Gustavo Bitencourt Lopes</strong>, tenho 17 anos e estou finalizando o ensino médio no <strong>Senac</strong>.
+        Gosto bastante de tecnologia e sempre busco aprender mais sobre programação com pessoas experientes na área.
+        No meu tempo livre, gosto de assistir jogos de futebol, filmes e jogar videogame.
+      </p>
+      <img src="IMG/foto minha.jpg" alt=""width="300px">
+    </div>
+  </section>
+
+  <!-- ======== Página 2: Habilidades ======== -->
+  <section id="habilidades" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Minhas Habilidades</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Habilidades Técnicas</h5>
+              <p class="card-text">
+                Java, JavaScript, HTML, CSS e lógica de programação.  
+                Tenho facilidade em aprender novas linguagens e gosto de desafios relacionados a código.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Soft Skills</h5>
+              <p class="card-text">
+                Sou prestativo, paciente, gosto de aprender com pessoas mais experientes e trabalho muito bem em equipe.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Idiomas</h5>
+              <p class="card-text">Português nativo e inglês em bom nível de compreensão e fala.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Página 3: Projetos ======== -->
+  <section id="projetos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Meus Projetos</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+              <h5 class="card-title">Mini Lojinha de Games</h5>
+              <p class="card-text">
+                Desenvolvida junto com meu grupo, essa página simula uma loja de games online,
+                feita com PYTHON, MySQl e Xampp (não funcional para vendas).
+              </p>
+              <img src="IMGSKILSS/Logo tipo pangoles.png" alt=""width="320px">
+              <ul>
+      <li><a href="https://github.com/pl5Gustavo/auladejava/blob/main/pangolesgames%20(4).sql" target="_blank">Banco de Dados (SQL)</a></li>
+      <li><a href="https://github.com/pl5Gustavo/auladejava/blob/main/pangolesgames%203.py" target="_blank">Código Python</a></li>
+    </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+              <h5 class="card-title">Jogo no Construct 3</h5>
+              <p class="card-text">
+                Um jogo simples criado no Construct 3, com foco em lógica, jogabilidade e design de fases.
+              </p>
+              <img src="IMGSKILSS/jogo.png" alt=""width="400px">
+              <p><strong>Repositório:</strong></p>
+    <a href="https://github.com/pl5Gustavo/auladejava/blob/main/chernobyl%20THE%20GAME.c3p" target="_blank">Arquivo do jogo (.c3p)</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+              <h5 class="card-title">Sistema de Consultar Investimentos</h5>
+              <p class="card-text">
+                Sistema desenvolvido em grupo simulando a consulta de investimentos.
+                Desenvolvido no NetBeans IDE 25.
+              </p>
+              <img src="IMGSKILSS/gastos.png" alt=""width="350px">
+              <p><strong>Repositório:</strong></p>
+    <a href="https://github.com/pl5Gustavo/auladejava/blob/main/AtividadeFinal.zip" target="_blank">Baixar projeto</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!-- ====== TECNOLOGIAS (wrapper) ====== -->
+<section id="tecnologias" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Tecnologias</h2>
+  </div>
+  <!-- aqui começam as sub-areas: Cibersegurança, Blockchain, Automação e Edge -->
+
+    <!-- ====== Cibersegurança ====== -->
+  <section id="ti" class="p-5">
+    <div class="container">
+      <h2>Cibersegurança</h2>
+      <div class="row">
+        <!-- O que é -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">O que é</h5>
+              <p class="card-text">
+                A cibersegurança é o conjunto de práticas e tecnologias criadas para proteger computadores, redes, sistemas e dados contra ataques digitais.
+Ela é essencial para evitar o roubo de informações e garantir que empresas e pessoas usem a internet com segurança
+              </p>
+              <img src="IMGTEC/cyber-security-article.jpg" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Tipos de Ameaças Digitais -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Tipos de Ameaças Digitais</h5>
+              <p class="card-text">
+                Entre as principais ameaças da cibersegurança estão os vírus, malwares, phishing (mensagens falsas que tentam enganar o usuário) e ataques de hackers que buscam invadir sistemas.
+Conhecer esses riscos é o primeiro passo para se proteger.
+              </p>
+              <img src="IMGTEC/phishing.webp" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Como se Proteger na Internet -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Como se Proteger na Internet</h5>
+              <p class="card-text">
+                Algumas formas de se proteger incluem usar senhas fortes, ativar a verificação em duas etapas, não clicar em links suspeitos e manter os programas sempre atualizados.
+A conscientização das pessoas é uma das principais defesas contra ataques virtuais.
+                          </p>
+              <img src="IMGTEC/proteção.jpg" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+    </div>
+  </section>
+
+  <!-- ====== BLOCKCHAIN ====== -->
+  <section id="ti" class="p-5">
+    <div class="container">
+      <h2>BLOCKCHAIN</h2>
+      <div class="row">
+        <!-- O que é Blockchain -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">O que é Blockchain</h5>
+              <p class="card-text">
+                Blockchain é uma tecnologia que funciona como um livro de registros digital e descentralizado.
+Ela permite registrar transações de forma segura e transparente, sem precisar de intermediários, como bancos ou governos.
+              <img src="IMGTEC/blockchain.jpg" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Segurança e Transparência -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Segurança e Transparência</h5>
+              <p class="card-text">
+                As informações no blockchain são protegidas por criptografia e validadas por diversos computadores ao redor do mundo.
+Isso torna os dados praticamente impossíveis de serem alterados, garantindo confiança nas transações.
+              <img src="IMGTEC/segurança block.webp" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Aplicações do Blockchain -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Aplicações do Blockchain</h5>
+              <p class="card-text">
+                Além das criptomoedas, o blockchain é usado em contratos inteligentes, rastreamento de produtos, votação eletrônica e validação de documentos.
+Seu uso está crescendo em várias áreas da tecnologia e dos negócios.
+                          </p>
+              <img src="IMGTEC/validação.png" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+    </div>
+  </section>
+
+  <!-- ====== AUTOMAÇÃO E ROBÓTICA ====== -->
+  <section id="ti" class="p-5">
+    <div class="container">
+      <h2>AUTOMAÇÃO E ROBÓTICA</h2>
+      <div class="row">
+        <!-- Conceito de Automação e Robótica -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Conceito de Automação e Robótica</h5>
+              <p class="card-text">
+                Automação é o uso de máquinas e sistemas para realizar tarefas com pouca ou nenhuma intervenção humana.
+A robótica é uma área da automação que envolve a criação e o controle de robôs para executar essas tarefas.
+              </p>
+              <img src="IMGTEC/automação.jfif" alt=""width="390px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Aplicações na Indústria -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Aplicações na Indústria</h5>
+              <p class="card-text">
+                Nas fábricas, robôs industriais realizam soldagens, montagens e inspeções com precisão.
+Isso aumenta a produtividade e reduz erros, além de tornar os ambientes de trabalho mais seguros
+              </p>
+              <img src="IMGTEC/robotização.jpg" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Robótica no Dia a Dia -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Robótica no Dia a Dia</h5>
+              <p class="card-text">
+                Hoje, a robótica vai além da indústria: está presente em aspiradores automáticos, cirurgias médicas, drones e até carros autônomos.
+A tendência é que robôs se tornem cada vez mais integrados à nossa rotina.
+                          </p>
+              <img src="IMGTEC/tesla.jpg" alt=""width="385px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+    </div>
+  </section>
+
+  <!-- ====== EDGE COMPUTING ====== -->
+  <section id="ti" class="p-5">
+    <div class="container">
+      <h2>EDGE COMPUTING</h2>
+      <div class="row">
+        <!-- O que é Edge Computing -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">O que é Edge Computing</h5>
+              <p class="card-text">
+                Edge Computing (ou Computação de Borda) é uma tecnologia que processa dados mais próximos de onde eles são gerados, em vez de depender totalmente da nuvem.
+Isso reduz o tempo de resposta e melhora a eficiência dos sistemas.
+              </p>
+              <img src="IMGTEC/edge.webp" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Por que é Importante -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Por que é Importante</h5>
+              <p class="card-text">
+                Em aplicações como carros autônomos, IoT e realidade aumentada, a velocidade é essencial.
+A computação de borda permite que os dispositivos tomem decisões rapidamente, sem depender de conexões lentas com servidores distantes.
+              </p>
+              <img src="IMGTEC/edgepq.png" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Aplicações Práticas -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Aplicações Práticas</h5>
+              <p class="card-text">
+                Edge Computing é usada em câmeras de segurança inteligentes, cidades conectadas e dispositivos de saúde que analisam dados em tempo real.
+Essa tecnologia está transformando a forma como os dados são processados no mundo moderno.
+                          </p>
+              <img src="IMGTEC/camera-inteligente.png" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+    </div>
+  </section>
+    <!-- fim das sub-areas -->
+</section>
+<!-- ====== FIM TECNOLOGIAS ====== -->
+
+
+  <!-- ====== TI ====== -->
+  <section id="ti" class="p-5">
+    <div class="container">
+      <h2>TI (Tecnologia da Informação)</h2>
+      <div class="row">
+        <!-- Card 1º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">1º Ano</h5>
+              <p class="card-text">
+                Durante o 1° ano o foco foi bastante em aprender a montar um computador e fazer orçamentos para clientes ficticios, foi bem útil e interessante ter aprendido isso.
+              </p>
+              <img src="IMG/hardware.png" alt=""width="370px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Card 2º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">2º Ano</h5>
+              <p class="card-text">
+                O conteúdo que aprendemos em TI no 2° ano não foi tão interessante de estudar, porém foi necessário ter estudado redes para que pudessemos ter uma noção de como funciona a área.
+              </p>
+              <img src="IMG/redes.png" alt=""width="370px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Card 3º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">3º Ano</h5>
+              <p class="card-text">
+                O 3° ano está sendo o melhor ano em questão ao curso técnico, estudar programação está sendo bem interessante e crucial para a minha decisão de qual curso fazer na faculdade.
+            
+              </p>
+              <img src="IMG/programação.jpg" alt=""width="370px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+    </div>
+  </section>
+
+  <!-- ====== CIÊNCIAS HUMANAS ====== -->
+  <section id="humanas" class="p-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">Ciências Humanas</h2>
+  
+      <div class="row">
+        <!-- Card 1º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">1º Ano</h5>
+              <p class="card-text">
+                Um trabalho que me marcou foi o filme <em>Idiocracia</em>, que mostrou como a
+                indústria cultural influencia a população.
+              </p>
+              <img src="IMG/idiocracia.jpg" alt="" width="200px">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 2º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">2º Ano</h5>
+              <p class="card-text">
+                No 2º ano, a Uberização foi o tema que eu mais gostei de estudar por ser um assunto do nosso cotidiano, mostra como as pessoas sem carteira assinada estão sendo exploradas.
+              </p>
+              <img src="IMG/uberização.webp" alt=""width="400px">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 3º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">3º Ano</h5>
+              <p class="card-text">
+                Já no 3° ano, eu achei o tema da ditadura militar muito interessante por se tratar de uma história recente do Brasil.
+              </p>
+              <img src="IMG/ditadura.jpg" alt="" width="400px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- ====== CIÊNCIAS DA NATUREZA ====== -->
+  <section id="natureza" class="p-5">
+    <div class="container">
+      <h2>Ciências da Natureza</h2>
+      <div class="row">
+        <!-- Card 1º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">1º Ano</h5>
+              <p class="card-text">
+                Apesar de eu não gostar muito de ciências da natureza, estudar termodinâmica foi bom para entender as relações entre calor, trabalho e energia.
+              </p>
+              <img src="IMG/termodinamica.webp" alt="" width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Card 2º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">2º Ano</h5>
+              <p class="card-text">
+                No 2º ano, entender sobre óptica foi muito bom para compreender o comportamento das aplicações da luz, o que é fundamental para a compreensão da visão.
+              </p>
+              <img src="IMG/optica.webp" alt=""width="350px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Card 3º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">3º Ano</h5>
+              <p class="card-text">
+                Um conteúdo que eu estou gostando de estudar no 3° ano é sobre a classe dos animais vertebrados em biologia.
+              </p>
+              <img src="IMG/ilustracao-indicando-os-grupos-de-animais-vertebrados-peixes-anfibios-repteis-aves-e-mamiferos.webp" alt=""width="400px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+          </div>
+  </section>
+
+  <!-- ====== MATEMÁTICA ====== -->
+  <section id="matematica" class="p-5 bg-light">
+    <div class="container">
+      <h2>Matemática</h2>
+      <div class="row">
+        <!-- Card 1º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">1º Ano</h5>
+              <p class="card-text">
+                No 1° ano eu lembro de termos estudado funções do 1° grau, aprendendo que o gráfico é sempre uma reta, sendo \(a\) o coeficiente angular (determina a inclinação da reta e se ela é crescente ou decrescente) e \(b\) o coeficiente linear (o ponto onde a reta cruza o eixo y). 
+              </p>
+              <img src="IMG/funções do 1 grau.jpg" alt=""width="350px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Card 2º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">2º Ano</h5>
+              <p class="card-text">
+                Já no 2° ano lembro de ter gostado de estudar função do 2° grau, foi útil para aprendermos que o gráfico de uma função do 2º grau é uma parábola. Para encontrar os pontos onde a função cruza o eixo x             
+               </p>
+               <img src="IMG/função do 2 grau.jpg" alt=""width="320px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Card 3º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">3º Ano</h5>
+              <p class="card-text">
+                Durante esse ano de 2025, gostei de ter estudado porcentagem, por ser um conteúdo que eu gosto bastante, principalmente por envolver muitas questões financeiras.
+              </p>
+              <img src="IMG/porcentagem.png" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+    </div>
+  </section>
+
+  
+  <!-- ====== LINGUAGENS ====== -->
+  <section id="linguagens" class="p-5 bg-light">
+    <div class="container">
+      <h2>Linguagens</h2>
+       <div class="row">
+        <!-- Card 1º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">1º Ano</h5>
+              <p class="card-text">
+                Um trabalho que me marcou foi quando o professor de português solicitou que todos os alunos lessem o livro capão pecado para participarem de uma roda de conversa.
+              </p>
+              <img src="IMG/capao pecado.jpg" alt=""width="350px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Card 2º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">2º Ano</h5>
+              <p class="card-text">
+               Gostei bastante de trabalhar com pixo no 2° ano, foi muito interessante elaborar obras com as tintas.
+              </p>
+              <img src="IMG/pixo-arte-vandalismo-design-filosofico.jpg" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Card 3º Ano -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">3º Ano</h5>
+              <p class="card-text">
+                Em 2025 gostei de trabalhar com redações na aula de português, é essencial receber suporte do professor para que seja possível organizar melhor a redação do Enem.
+              </p>
+              <img src="IMG/enem.webp" alt=""width="380px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
+
+</body>
+</html>
