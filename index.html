@@ -668,6 +668,29 @@ Essa tecnologia está transformando a forma como os dados são processados no mu
   </section>
     </div>
   </section>
+<section id="contato" class="p-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Entre em Contato</h2>
+    <form action="salvar_contato.php" method="POST" class="w-75 mx-auto">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" id="nome" name="nome" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="assunto" class="form-label">Assunto:</label>
+        <textarea id="assunto" name="assunto" rows="4" class="form-control" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
+  </div>
+</section>
 
 </body>
 </html>
